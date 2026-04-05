@@ -52,7 +52,7 @@ body {
   font-size: var(--fs-lg);
   font-weight: 300;
   letter-spacing: -0.01em;
-  line-height: 1.55;  /* tighter — Manolo feedback */
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
@@ -95,7 +95,7 @@ a:hover { text-decoration-color: var(--accent-4); }
 }
 
 /* ═══════════════════════════════════════
-   HEADER — logo + tagline + nav in one row
+   HEADER — logo (big) + tagline below + nav right
 ═══════════════════════════════════════ */
 .site-header {
   background-color: var(--base);
@@ -111,21 +111,21 @@ a:hover { text-decoration-color: var(--accent-4); }
   margin: 0 auto;
   padding: 0 var(--s-40);
   display: flex;
-  align-items: flex-end; /* nav aligns with bottom of logo block */
+  align-items: flex-end; /* nav aligns with bottom baseline */
   justify-content: space-between;
   gap: var(--s-40);
 }
 
-/* Logo block: title + tagline stacked tight */
-.header-logo-block {
+/* Logo block: stacked vertically — title then tagline */
+.header-brand {
   display: flex;
   flex-direction: column;
-  gap: 2px; /* very tight — tagline close to logo */
+  gap: 3px;
   line-height: 1;
 }
 
 .site-title {
-  font-size: 1rem;
+  font-size: 1.35rem;  /* bigger, bolder */
   font-weight: 800;
   letter-spacing: .15em;
   text-transform: uppercase;
@@ -150,7 +150,7 @@ a:hover { text-decoration-color: var(--accent-4); }
   gap: var(--s-40);
   list-style: none;
   padding: 0;
-  align-self: flex-end; /* align with tagline baseline */
+  align-self: flex-end;
 }
 
 .site-nav a {
@@ -174,10 +174,10 @@ a:hover { text-decoration-color: var(--accent-4); }
    HOMEPAGE SECTIONS
 ═══════════════════════════════════════ */
 
-/* Section 1: Dark hero */
+/* Hero blockquote — small, italic, quote-style with left border */
 .home-hero {
-  background-color: #0c0b0a;
-  padding: var(--s-50) var(--s-40) var(--s-60);
+  background-color: var(--base);
+  padding: var(--s-60) var(--s-40);
 }
 
 .home-hero-inner {
@@ -185,24 +185,25 @@ a:hover { text-decoration-color: var(--accent-4); }
   margin: 0 auto;
 }
 
-/* Hero blockquote — small, italic, quote-style */
 .hero-quote {
   border: none;
   padding: 0;
   text-align: left;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 300;
-  color: var(--base);
+  color: var(--accent-4);
   line-height: 1.7;
   letter-spacing: 0;
+  font-style: italic;
+  border-left: 2px solid var(--accent-4);
+  padding-left: var(--s-40);
 }
 .hero-quote p {
-  margin-bottom: .2em;
-  font-style: italic;
+  margin-bottom: .15em;
 }
 .hero-quote p:last-child { margin-bottom: 0; }
 
-/* Section 2: Tertiary about */
+/* Section 2: About — light accent */
 .home-about {
   background-color: var(--accent-5);
   padding: var(--s-60) var(--s-40);
